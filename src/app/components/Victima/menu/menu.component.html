@@ -1,0 +1,37 @@
+<mat-toolbar class="blue-toolbar">
+    <a [routerLink]="['/victimaHome']" style="text-decoration: none; color: inherit;">
+        <span>Amparo</span>
+    </a>
+    <span class="spacer"></span>
+    
+    <button mat-button [matMenuTriggerFor]="menupeticion">Peticiones</button>
+    <mat-menu mat-menu #menupeticion="matMenu">
+        <button mat-menu-item [routerLink]="['/CrearPeticion']">Registrar peticion</button>
+        <button mat-menu-item [routerLink]="['/ListarPeticion']">Historial Peticiones</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menusesiones">Sesiones</button>
+    <mat-menu mat-menu #menusesiones="matMenu">
+        <button mat-menu-item [routerLink]="['/viclistarsesionpendi']">Sesiones pendientes</button>
+        <button mat-menu-item [routerLink]="['/vichistorialsesionpendi']">Historial Sesiones</button>
+    </mat-menu>
+
+    <button mat-button [routerLink]="['/Foro']" class="custom-button">
+        Foros
+    </button>
+
+    <button mat-button [routerLink]="['/profesionales']" class="custom-button">
+        Profesionales
+    </button>
+    
+
+    <button mat-button [routerLink]="['/Refugio']" class="custom-button">
+        Refugios
+    </button>
+
+    <button mat-flat-button>Boton de Emergencia</button>
+
+    <button mat-icon-button [routerLink]="['/Perfil']">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+</mat-toolbar>

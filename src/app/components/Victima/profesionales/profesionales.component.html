@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<body>
+    <h1>Profesionales</h1>
+    <h4>Contamos con los mejores especialistas!</h4>
+    <div class="filtros">
+        <mat-form-field>
+            <mat-label>Profesional</mat-label>
+            <mat-select [(ngModel)]="selectedProfesional">
+                <mat-option value="">None</mat-option>
+                <mat-option *ngFor="let profesional of profesionales" [value]="profesional">
+                    {{ profesional }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-button class="custom-button" (click)="filtrarUsuarios()">
+            Filtrar
+        </button>
+    </div>
+    <div *ngIf="filteredUsers.length > 0" class="profesionales-container">
+        <ul class="profesionales-grid">
+            <li *ngFor="let user of filteredUsers" class="profesional-box">
+                <strong>{{ user.name }}</strong>
+                <ul class="especialidad-grid">
+                    <li *ngFor="let especialidad of especialidades[user.id!]">
+                        <strong>Numero de Colegiatura:</strong>   {{ especialidad.numero_colegiatura }}
+                        <br>
+                        <strong>Especialidad:</strong>{{ especialidad.especialidad_nombre }}
+                        <br>
+                        <strong>Descripción: </strong>{{ especialidad.descripcion }}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>

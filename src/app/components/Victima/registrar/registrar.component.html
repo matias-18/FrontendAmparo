@@ -1,0 +1,37 @@
+<body class="registroPs">
+    <div class="left-image-container">
+        <img src="assets/registro.jpeg" class="imagenespsicologo">
+    </div>
+    <div class="right-form-container">
+        <h1 class="h1Abog">Registrarse</h1>
+        <p>Bienvenido! Ingresa tus datos para brindar apoyo</p>
+        <form [formGroup]="usersForm" (ngSubmit)="registrar()">
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" required placeholder="Ingrese su suario" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Nombres</mat-label>
+                <input matInput formControlName="name" required placeholder="Ingrese sus Nombres" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Apellidos</mat-label>
+                <input matInput formControlName="surnames" required placeholder="Ingrese sus Apellidos" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" required placeholder="Ingrese su correo" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input matInput formControlName="password" required placeholder="Ingrese su contraseña" type="password" />
+            </mat-form-field>
+          
+
+            <button mat-raised-button color="accent" type="submit" [disabled]="usersForm.invalid">Registrar</button>
+        </form>
+    </div>
+</body>

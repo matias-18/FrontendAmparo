@@ -1,0 +1,11 @@
+body {
+    background-color: #280b4c;
+    color: white;
+    text-align: center;
+    padding-top: 7%;
+}
+
+button {
+    background: transparent;
+    border: transparent;
+}

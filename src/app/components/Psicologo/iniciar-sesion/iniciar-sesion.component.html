@@ -1,0 +1,25 @@
+<body>
+  <div class="login-container">
+    <h2>Inicio de Sesión</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="input-field">
+        <mat-label>Usuario</mat-label>
+        <input matInput formControlName="username" placeholder="VMicaelaNuñez" required>
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill" class="input-field">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="*********" required>
+      </mat-form-field>
+      
+      <mat-checkbox formControlName="rememberMe" class="checkbox">Recordarme</mat-checkbox>
+      
+      <button mat-raised-button color="primary" class="login-button" type="submit">Iniciar Sesión</button>
+  
+      <p class="register">
+        ¿Aún no tienes cuenta? 
+        <a [routerLink]="['/registrarPs']">Regístrate</a>
+      </p>
+    </form>
+  </div>
+</body>

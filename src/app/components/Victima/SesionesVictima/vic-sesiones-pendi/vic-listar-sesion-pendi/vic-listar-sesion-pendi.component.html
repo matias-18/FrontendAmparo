@@ -1,0 +1,34 @@
+<app-menu></app-menu>
+<body>
+  <div class="container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="cd2">
+        <th mat-header-cell *matHeaderCellDef class="descripcion-header">Título</th>
+        <td mat-cell *matCellDef="let sesion" class="descripcion">{{ sesion.titulo }}</td>
+      </ng-container>
+      <ng-container matColumnDef="cd5">
+        <th mat-header-cell *matHeaderCellDef class="descripcion-header">Fecha</th>
+        <td mat-cell *matCellDef="let sesion" class="descripcion">{{ sesion.fecha }}</td>
+      </ng-container>
+      <ng-container matColumnDef="cd11">
+        <th mat-header-cell *matHeaderCellDef class="descripcion-header">Estado</th>
+        <td mat-cell *matCellDef="let sesion" class="descripcion">{{ sesion.estado }}</td>
+      </ng-container>
+      <ng-container matColumnDef="detalles">
+        <th mat-header-cell *matHeaderCellDef class="descripcion-header">Detalles</th>
+        <td mat-cell *matCellDef="let sesion" class="descripcion">
+          <button mat-button (click)="verDetalleSesion(sesion.id)" class="custom-button">Detalles</button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="atender">
+        <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Opciones </th>
+        <td mat-cell *matCellDef="let sesion">
+          <button mat-button class="contactar-button" (click)="atenderSesion(sesion)">Atender</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</body>

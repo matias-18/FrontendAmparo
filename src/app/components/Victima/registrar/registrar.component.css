@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fef9e6;
+  overflow: hidden;
+}
+
+.left-image-container {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  background-color: #fef9e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+mat-form-field {
+  width: 70%;
+  margin: 10px 0;
+}
+
+/* Cambiar color de borde y texto dentro de los inputs */
+.mat-form-field input, .mat-form-field textarea {
+  color: black; /* Color de texto dentro del campo */
+}
+
+/* Cambiar color del borde en estado normal */
+.mat-form-field .mat-form-field-outline {
+  border-color: purple; /* Borde de los campos */
+}
+
+/* Cambiar color del borde cuando está en foco */
+.mat-form-field.mat-focused .mat-form-field-outline {
+  border-color: #5F107B; /* Color al enfocar */
+}
+
+/* Cambiar color de la etiqueta cuando está en foco */
+.mat-form-field.mat-focused .mat-label {
+  color: #5F107B;
+}
+
+/* Cambiar color del texto de la etiqueta */
+mat-label, input, mat-select, mat-error {
+  color: purple; /* Color de las etiquetas y mensajes de error */
+}
+
+/* Cambiar color del placeholder */
+.mat-form-field .mat-input-placeholder {
+  color: #757575; /* Gris para el placeholder */
+}
+
+.imagenespsicologo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-form-container {
+  width: 50%;
+  padding: 40px;
+  background-color: #fef9e6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+}
+
+.h1Abog {
+  font-size: 50px;
+  color: #5F107B;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+button[type="submit"] {
+  width: 70%;
+  background-color: #5F107B;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+button[type="submit"]:hover {
+  background-color: #4c0a63;
+}
+
+@media (max-width: 768px) {
+  body, html {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  }
+
+  .left-image-container,
+  .right-form-container {
+      width: 100%;
+  }
+
+  .h1Abog {
+      font-size: 24px;
+  }
+
+  .imagenespsicologo {
+      max-width: 200px;
+      margin-bottom: 20px;
+  }
+}

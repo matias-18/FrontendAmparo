@@ -1,0 +1,76 @@
+body {
+    background-color: #C192E0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerchiquito {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fffbe5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.titulo h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.descripcion, .link {
+    font-size: 1em;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.custom-button {
+    background-color: #673ab7; 
+    color: white; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    width: 120px;
+    height: 40px;
+    border: none;
+    text-align: center;
+}
+
+.custom-button:hover {
+    background-color: #5e35b1; 
+}
+
+.custom-button2 {
+    background-color: #673ab7; 
+    color: white; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    width: 100px;
+    border: none;
+    text-align: center;
+}
+
+.custom-button2:hover {
+    background-color: #5e35b1; 
+}

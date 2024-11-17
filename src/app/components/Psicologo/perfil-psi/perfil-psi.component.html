@@ -1,0 +1,35 @@
+<app-menu-psicologo/>
+<div class="user-form">
+    <h2>Bienvenido a tu perfi!  
+        {{ userName }}</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+
+        <div>
+            <label for="name">Nombre:</label>
+            <input id="name" formControlName="name" type="text" required>
+            <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+                <small>Nombre es requerido.</small>
+            </div>
+        </div>
+
+        <div>
+            <label for="surnames">Apellidos:</label>
+            <input id="surnames" formControlName="surnames" type="text" required>
+            <div *ngIf="userForm.get('surnames')?.invalid && userForm.get('surnames')?.touched">
+                <small>Apellidos son requeridos.</small>
+            </div>
+        </div>
+
+        <div>
+            <label for="email">Correo:</label>
+            <input id="email" formControlName="email" type="email" required>
+            <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+                <small>Ingresa un correo válido.</small>
+            </div>
+        </div>
+
+        <button type="button" (click)="logout()" class="logout-button">Cerrar Sesión</button>
+        
+    </form>
+</div>

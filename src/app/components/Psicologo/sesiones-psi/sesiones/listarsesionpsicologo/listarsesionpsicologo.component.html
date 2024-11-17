@@ -1,0 +1,72 @@
+<app-menu-psicologo/>
+<body>
+    <div class="container">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="cd1">
+          <th mat-header-cell *matHeaderCellDef class="descripcion-header"> ID </th>
+          <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.id}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="cd2">
+          <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Título </th>
+          <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.titulo}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="cd3">
+          <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Descripción </th>
+          <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.descripcion}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="cd4">
+          <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Tipo </th>
+          <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.tipo}} </td>
+        </ng-container> 
+    
+        <ng-container matColumnDef="cd5">
+          <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Fecha </th>
+          <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.fecha}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="cd6">
+          <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Estado </th>
+          <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.estado}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cd7">
+            <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Hora Incio </th>
+            <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.hora_inicio}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="cd8">
+            <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Hora Fin </th>
+            <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.hora_fin}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cd9">
+            <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Link Sesion </th>
+            <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.link_sesion}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cd10">
+            <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Link Grabacion </th>
+            <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.link_grabacion}} </td>
+          </ng-container>
+          <ng-container matColumnDef="cd11">
+            <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Estado </th>
+            <td mat-cell *matCellDef="let Sesion" class="descripcion"> {{Sesion.estado}} </td>
+          </ng-container>
+          <ng-container matColumnDef="detalles">
+            <th mat-header-cell *matHeaderCellDef class="descripcion-header">Detalles</th>
+            <td mat-cell *matCellDef="let sesion" class="descripcion">
+              <button mat-button (click)="verDetalleSesion(sesion.id)" class="custom-button">
+                Detalles
+              </button>
+            </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>   
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <button mat-icon-button class="add-button" routerLink="/crearSesionpsi" routerLinkActive="active">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </body>
+  

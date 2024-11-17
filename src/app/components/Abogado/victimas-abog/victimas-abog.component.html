@@ -1,0 +1,16 @@
+<app-menu-abog/>
+<body>
+    <h1>Victimas</h1>
+    <h4>Mujeres valientes que decidieron poner un alto!</h4>
+    
+    <div *ngIf="filteredUsers.length > 0" class="victimas-container">
+      <ul class="victimas-grid">
+        <li *ngFor="let user of filteredUsers" class="victimas-box">
+          <strong>{{ user.name }}  </strong> 
+          <strong>{{ user.surnames }}</strong>  
+          <br>
+          <strong>{{ user.email }}</strong>
+        </li>
+      </ul>
+    </div>
+  </body>

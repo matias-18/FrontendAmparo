@@ -1,0 +1,40 @@
+body {
+    background-color: #C192E0;
+}
+
+.containerchiquito {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 30px;
+}
+
+.box {
+    background-color: #fffbe5;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.custom-button {
+    background-color: #673ab7; 
+    color: white; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    width: 200px;
+    height: 40px;
+    border-color: black;
+    align-items: right;
+}
+
+.custom-button:hover {
+    background-color: #5e35b1; 
+}

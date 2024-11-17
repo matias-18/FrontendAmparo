@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<body>
+    <div class="container">
+      <div class="containerchiquito" *ngIf="sesion">
+        <div class="box titulo">
+          <h4><strong>{{ sesion.titulo }}</strong></h4>
+        </div> 
+        <div class="box descripcion">
+          <p>{{ sesion.descripcion }}</p>
+        </div>
+        <div class="box">
+          <p><strong>Fecha:</strong> {{ sesion.fecha | date }}</p>
+          <p><strong>Hora Inicio:</strong> {{ sesion.hora_inicio }}</p>
+          <p><strong>Hora Fin:</strong> {{ sesion.hora_fin }}</p>
+          <p><strong>Estado:</strong> {{ sesion.estado }}</p>
+        </div>
+        <div class="box link">
+          <p><strong>Link sesion:</strong> <a href="{{ sesion.link_sesion }}" target="_blank">{{ sesion.link_sesion }}</a></p>
+          <p><strong>Link grabacion:</strong> <a href="{{ sesion.link_grabacion }}" target="_blank">{{ sesion.link_grabacion }}</a></p>
+        </div>
+        <button mat-button class="custom-button" (click)="volver()">Volver</button>
+      </div>
+      <p *ngIf="!sesion">Cargando...</p>
+    </div>
+  </body>
+  

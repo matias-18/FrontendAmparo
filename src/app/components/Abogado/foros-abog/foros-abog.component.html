@@ -1,0 +1,39 @@
+<app-menu-abog></app-menu-abog>
+<body>
+  <div class="foro-container">
+    <h1 class="titulo">Foro de Consultas</h1>
+    <p class="subtitulo">En este espacio puedes compartir tus consultas a nuestros colaboradores o compartir pensamientos con otros usuarios.</p>
+    
+    <form [formGroup]="comentarioForm" (ngSubmit)="publicarComentario()">
+      <div class="comentario-form">
+        <div class="usuario-info">
+          <span class="usuario-nombre">
+           
+            {{ usuario ? (comentarioForm.value.anonimo ? 'Anónimo' : usuario.name + ' ' + usuario.surnames) : 'Anónimo' }}
+          </span>
+          <label>
+            <input type="checkbox" formControlName="anonimo" /> Anónimo
+          </label>
+        </div>
+        <textarea formControlName="description" placeholder="Escribe tu consulta o pensamiento..." ></textarea>
+
+        
+        <div *ngIf="comentarioForm.get('description')?.invalid && comentarioForm.get('description')?.touched" class="error-message">
+          El campo descripción es obligatorio.
+        </div>
+        
+        <button type="submit" class="btn-enviar" [disabled]="comentarioForm.invalid">Enviar Comentario</button>
+      </div>
+    </form>
+
+    <div *ngFor="let comentario of comentarios" class="comentario">
+      <div class="usuario-info">
+        <span class="usuario-nombre">
+          {{ comentario.anonimo ? 'Anónimo' : comentario.usuario ? comentario.usuario.name + ' ' + comentario.usuario.surnames : 'Usuario Desconocido' }}
+        </span>
+        <span class="fecha">{{ comentario.fecha | date:'short' }}</span>
+      </div>
+      <p class="comentario-texto">{{ comentario.description }}</p>
+    </div>
+  </div>
+</body>

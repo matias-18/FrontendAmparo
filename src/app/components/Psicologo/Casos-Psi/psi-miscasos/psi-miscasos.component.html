@@ -1,0 +1,22 @@
+<app-menu-psicologo/>
+<body>
+    <div class="container">
+        <div class="containerchiquito" *ngIf="peticion">
+            <div class="box titulo">
+                <strong><h4>Titulo: {{ peticion.titulo }}</h4></strong>
+            </div> 
+            <div class="box">
+                <strong><p>Tipo: {{ peticion.tipo }}</p></strong>
+            </div>
+            <div class="box">
+                <strong><p>Descripción: {{ peticion.descripcion }}</p></strong>
+            </div>
+            
+            <button mat-button class="custom-button" (click)="volver()" >Volver</button>
+
+            
+        </div>
+        <p *ngIf="!peticion">Cargando...</p>
+    </div>
+    
+</body>

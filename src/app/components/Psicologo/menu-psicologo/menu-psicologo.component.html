@@ -1,0 +1,33 @@
+<mat-toolbar class="blue-toolbar">
+    <a [routerLink]="['/psicologoHome']" style="text-decoration: none; color: inherit;">
+        <span>Amparo</span>
+    </a>
+    <span class="spacer"></span>
+    
+    <button mat-button [matMenuTriggerFor]="menupeticion">Peticiones</button>
+    <mat-menu mat-menu #menupeticion="matMenu">
+        <button mat-menu-item [routerLink]="['/peticionesPsi']">Historial Peticiones</button>
+        <button mat-menu-item [routerLink]="['/psiPeticionesCaso']">Mis Casos</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menusesiones">Sesiones</button>
+    <mat-menu mat-menu #menusesiones="matMenu">
+        <button mat-menu-item [routerLink]="['/listarSesionPsicologo']">Mis Sesiones</button>
+        <button mat-menu-item [routerLink]="['/historialSesionespsico']">Historial Sesiones</button>
+    </mat-menu>
+
+    <button mat-button [routerLink]="['/ForoPsicologos']" class="custom-button">
+        Foros
+    </button>    
+    
+
+    <button mat-button [routerLink]="['/victimasPsi']" class="custom-button">
+        Victimas
+    </button>
+
+    <button mat-flat-button>Boton de Emergencia</button>
+
+    <button mat-icon-button [routerLink]="['/perfilPsi']">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+</mat-toolbar>

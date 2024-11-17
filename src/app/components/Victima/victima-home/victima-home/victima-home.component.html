@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+<body>
+    
+    <h1>¡Bienvenida, <br>
+        {{ userName }}!</h1>
+    <h4>¿Cómo te sientes hoy?</h4>
+    <div class="fotos">
+        <button mat-button [routerLink]="['/victimaFeliz']">
+            <img src="assets/alegrecoolor.jpg"  alt="Alegre">
+        </button>
+        <button mat-button [routerLink]="['/victimaTriste']">
+            <img src="assets/tristecolor.jpg"  alt="Triste">
+        </button>
+       
+    </div>
+
+</body>

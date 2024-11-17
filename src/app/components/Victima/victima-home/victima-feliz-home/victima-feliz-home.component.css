@@ -1,0 +1,31 @@
+body {
+    background-color: #c192e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Asegura que el contenido se alinee al principio */
+    margin: 0; /* Elimina el margen por defecto */
+    padding-top: 2%; /* Ajusta el padding superior según sea necesario */
+}
+
+.main-text {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #280b4c;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.maintexto-texto h1 {
+    font-weight: 200;
+    font-size: 1.7rem;
+    color: #FFFFFF;
+}
+
+.maintexto-texto .h12 {
+    font-weight: 10;
+    font-size: 1.7rem;
+    color: #FFFFFF;
+}

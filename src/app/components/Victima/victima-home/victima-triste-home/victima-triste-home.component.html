@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+<main class="main" id="main">
+    <div class="main-content container">
+        <div class="main-text">
+            <h1>¡Bienvenida! <br></h1>
+            <h2>{{ userName }}!</h2>
+            <br>
+            <br>
+            <br>
+            <p>Queremos brindarte el apoyo que necesitas</p>
+            <div class="main-imagenes">
+                <button mat-button [routerLink]="['/CrearPeticion']">
+                    <img src="assets/papelcolor.png"  alt="">
+                </button>
+                <button mat-button [routerLink]="['/Foro']">
+                    <img src="assets/discusioncolor.png "  alt="">
+                </button>                               
+            </div>
+            <div class="maintexto-imagenes">
+                <p>Cuéntanos tu caso</p>
+                <p>Reciba apoyo de la comunidad</p>
+            </div>                      
+        </div>
+    </div>
+</main>

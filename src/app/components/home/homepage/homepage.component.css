@@ -1,0 +1,505 @@
+.apoyo {
+    background-image: repeating-linear-gradient(
+        #663d75,
+        rgba(227, 178, 241, 0.7)),
+        url(/src/assets/bg.jpeg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 67.8%;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16vw;
+    padding-top: 15vh;
+}
+
+.apoyo .imgmapa {
+    width: 100vw;
+    height: auto;
+    transform: translateX(10vw);
+}
+
+.apoyo-content h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.higlightapoyo {
+    color: #280b4c;
+    font-weight: bold;
+}
+
+.apoyo .btn-1 button {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 2rem;
+    background: #280b4c;
+    border-color: white;
+    border-radius: 70px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.whoweare {
+    background-color: #fffbe5;
+    width: 71.85%;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14vw;
+}
+
+.whoweare-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12vw;
+}
+
+.whoweare .imgquienesomos {
+    width: 32vw;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whowearetext {
+    text-align: center;
+}
+
+.whowearetext p {
+    font-weight: 100%;
+    font-size: 1.25rem;
+    color: black;
+}
+
+.highlight {
+    color: #5F107B;
+    font-weight: bold;
+}
+
+.whowearetext h2 {
+    font-weight: 110%;
+    font-size: 2rem;
+    color: #280b4c;
+}
+
+@media (max-width: 1024px) {
+    .apoyo-content h1 {
+        font-size: 3rem;
+    }
+
+    .whoweare-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .apoyo {
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+    .apoyo-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .whoweare {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .whoweare .imgquienesomos {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .apoyo-content h1 {
+        font-size: 2rem;
+    }
+
+    .whowearetext p {
+        font-size: 1rem;
+    }
+}
+
+.colaboradores {
+    background-color: #c192e0;
+    width: 90%; 
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0 5vw; 
+    margin: 0 auto; 
+}
+
+
+.colaboradores-text {
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 7vh;
+}
+
+.colaboradores-text h2 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.colaboradores-text h3 {
+    color: black;
+    font-weight: 420;
+    font-size: 1rem;
+}
+
+
+.colaboradores-group {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 12vw;
+    flex-wrap: wrap; 
+}
+
+
+.colaboradoresimg {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.colaboradores-group h3 {
+    color: #280b4c;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 4vh;
+}
+
+
+.colaboradores-group p {
+    color: #280b4c;
+    font-weight: 420%;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 1vh;
+}
+
+
+.colaboradores-group .btn-1 button {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.5rem 3rem;
+    background: #280b4c;
+    border-color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 1024px) {
+    .colaboradores {
+        padding: 0 5vw;
+    }
+
+    .colaboradoresimg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .colaboradores-group h3 {
+        font-size: 1.5rem;
+    }
+
+    .colaboradores-group p {
+        font-size: 1rem;
+    }
+
+    .colaboradores-text h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .colaboradores {
+        padding: 0 3vw;
+    }
+
+    .colaboradoresimg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .colaboradores-group h3 {
+        font-size: 1.2rem;
+    }
+
+    .colaboradores-group p {
+        font-size: 1rem;
+    }
+
+    .colaboradores-group .btn-1 button {
+        font-size: 1.2rem;
+        padding: 0.4rem 2rem;
+    }
+
+    .colaboradores-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .colaboradores {
+        padding: 0 2vw;
+    }
+
+    .colaboradoresimg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .colaboradores-group h3 {
+        font-size: 1rem;
+    }
+
+    .colaboradores-group p {
+        font-size: 0.9rem;
+    }
+
+    .colaboradores-group .btn-1 button {
+        font-size: 1rem;
+        padding: 0.3rem 1.5rem;
+        max-width: 200px;
+    }
+
+    .colaboradores-text h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+.colaboradores-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.colab-1, .colab-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+
+.contactanos{
+    background-color: #280b4c;
+    width: 90%;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5vw;
+}
+.contactanos-texto{
+    padding-top: 3vh;
+    padding-bottom: 7vh;
+}
+.contactanos-texto h2{
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+.contactanos-texto h3{
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.textarea-container {
+    position: relative;
+    display: inline-block;
+}
+
+.textarea{
+    resize: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding-top: 2px;
+    padding-left: 14px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    border-radius: 25px;
+}
+
+.contactanos-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20vh;
+}
+
+.contactanos-content{
+    margin-bottom: 9vh;
+}
+
+
+.contactanos-redes-group-container {
+    flex-direction: column; 
+    align-items: flex-end; 
+}
+
+.contactanos-redes-group, .contactanos-redes-group2 {
+    display: flex;
+    flex-direction: row; 
+    margin: 10px 0; 
+}
+
+.contactanos-redes-group a, .contactanos-redes-group2 a {
+    font-size: 9rem; 
+    margin: 0 10px; 
+    color: #ffffff;
+}
+
+.contactanos-redes-group a:hover,
+.contactanos-redes-group2 a:hover {
+    color: #c192e0;
+}
+
+
+@media (max-width: 768px) {
+    .contactanos-texto h2 {
+        font-size: 1.8rem; 
+    }
+    
+    .contactanos-texto h3 {
+        font-size: 1rem; 
+    }
+
+    .contactanos-group {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10vh; 
+    }
+
+    .contactanos-redes-group a, .contactanos-redes-group2 a {
+        font-size: 5rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .textarea {
+        font-size: 1.4rem; 
+    }
+    
+    .contactanos-group {
+        gap: 5vh; 
+    }
+}
+
+.footer {
+    background-color: white; 
+    color: black; 
+    padding: 20px 0; 
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.lineasuperior {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 3000px; 
+    padding: 0 20px; 
+}
+
+.redeslink {
+    display: flex;
+    align-items: center; 
+}
+
+.redeslink a {
+    margin-right: 15px; 
+    color: black; 
+    font-size: 2rem; 
+}
+
+.llamanoslink {
+    display: flex;
+    align-items: center; 
+    margin-left: auto; 
+}
+
+.copylink {
+    margin-top: 15px; 
+    text-align: center; 
+}
+
+.blue-toolbar button {
+    color: #280b4c; 
+    font-size: 1.2rem;
+}
+
+
+.blue-toolbar {
+    color: #280b4c; 
+    background-color: #fffbe5; 
+    font-weight: bold;
+    font-size: 30px;
+    height: 10vh;
+    justify-content: space-between;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.blue-toolbar button {
+    color: #280b4c; 
+    font-size: 1.2rem;
+}
+

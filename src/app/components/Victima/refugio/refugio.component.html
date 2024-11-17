@@ -1,0 +1,52 @@
+<app-menu></app-menu>
+  <body>
+    <h1>Refugios</h1>
+    <h4>Conoce los refugios presentes en nuestro país</h4>
+    <div class="filtros">
+    <mat-form-field>
+        <mat-label>Departamento</mat-label>
+        <mat-select [(ngModel)]="selectedDepartamento">
+            <mat-option value="">None</mat-option>
+            <mat-option *ngFor="let departamento of departamentos" [value]="departamento">
+                {{ departamento }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field>
+        <mat-label>Distrito</mat-label>
+        <mat-select [(ngModel)]="selectedDistrito">
+            <mat-option value="">None</mat-option>
+            <mat-option *ngFor="let distrito of distritos" [value]="distrito">
+                {{ distrito }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+  
+    <button mat-button class="custom-button" (click)="filtrarRefugios()">
+        Filtrar
+    </button>
+    </div>
+  
+  <div *ngIf="refugiosFiltrados.length > 0" class="refugios-container">
+    <ul class="refugios-grid">
+        <li *ngFor="let refugio of refugiosFiltrados" class="refugio-box">
+            <strong>Nombre:</strong> {{ refugio.nombre }} <br>
+            <strong>Departamento:</strong> {{ refugio.departamento }} <br>
+            <strong>Distrito:</strong> {{ refugio.distrito }} <br>
+            <strong>Dirección:</strong> {{ refugio.direccion }} <br>
+            <strong>Teléfono:</strong> {{ refugio.telefono }} <br>
+            <br>
+            <button mat-button class="contactar-button" (click)="redirectToGoogle()">
+              Contactar
+          </button>
+        </li>
+    </ul>
+  </div>
+  <div *ngIf="noResults">
+    No se encontraron refugios.
+  </div>
+    
+  
+  </body>
+  

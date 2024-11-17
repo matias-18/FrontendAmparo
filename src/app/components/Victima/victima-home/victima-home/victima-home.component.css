@@ -1,0 +1,25 @@
+body {
+    background-color: #280b4c;
+    color: white;
+    text-align: center;
+    padding-top: 7%;
+}
+
+button {
+    background: transparent;
+    border: transparent;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 10vh; 
+    margin-top: 20px; 
+}
+
+.fotos img {
+    width: auto;
+    height: 30vh;
+    max-height: 100vh;
+    margin-top: 2vh;
+}
